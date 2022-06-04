@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="container">   
+        
+        <header>
+            <h1 id="title">FreeCodeCamp Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve the platform</p>
+        </header>
+
+        <!-- Survey form starts -->
+        <form id="survey-form" action="#">
+            <label id="name-label" for="name" class="labelWidth">NAME</label>
+            <input type="text" name="user_name" id="name" placeholder="Your Name" required>
+            <label class="labelWidth" for="email" id="email-label">EMAIL</label>
+            <input type="email" name="user_email" id="email" placeholder="Your Email" required>
+            <label class="labelWidth" for="age" id="number-label">AGE (Optional)</label>
+            <input type="number" name="user_age" id="age" min="13" max="120" placeholder="Your Age">
+            <label class="labelWidth" for="choice" id="select-label">Which option best describes your current role?</label>
+            <select name="user_choice" id="choice">
+                <option value="0">Student</option>
+                <option value="1">Full Time</option>
+                <option value="2">Part Time</option>
+                <option value="3">Other</option>
+            </select>
+            <label class="labelWidth">would you recommed FreeCodeCamp to your friend?</label>
+            <div class="custom-radio">
+                <input type="radio" name="user_reffer" id="definitely" checked>
+                <label for="definitely">Definity</label>
+            </div>
+            <div class="custom-radio">
+                <input type="radio" name="user_reffer" id="maybe">
+                <label for="maybe">Maybe</label>
+            </div>
+            <div class="custom-radio">
+                <input type="radio" name="user_reffer" id="notSure">
+                <label for="notSure">Not sure</label>
+            </div>
+            <div class="custom-checked">
+                <label for="checkBox" class="labelWidth" id="check-question">What would you like to improved?</label>
+                <label for="#" class="labelWidth"><input type="checkbox" value="frontend" name="change1" id="fronend"> Frontend</label>
+                <label for="#" class="labelWidth"><input type="checkbox"  id="backend" value="backend"> Backend</label>
+                <label for="#" class="labelWidth"><input type="checkbox"  id="python" value="python"> Python</label>
+                <label for="#" class="labelWidth"><input type="checkbox"  id="AI" value="ai"> AI</label>
+            </div>
+            <div class="commet-section">
+                <label for="commet" class="labelWidth">Any comment or suggestions?</label>
+                <textarea name="user_comment" id="comment" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div class="submit">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <!-- Survey form ends -->
+    </div>
+</body>
+
+</html>
