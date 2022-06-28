@@ -45,5 +45,9 @@ section article {
 section ul li {
     margin: 15px 0 0 20px
 }
+
+section ul li span {
+    font-weight: bold;
+}
   
   
