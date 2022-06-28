@@ -1,10 +1,14 @@
+* {
+    color: #fff;
+}
+
 html,
 body {
   min-width: 290px;
-  color: #4d4e53;
-  background-color: #ffffff;
+  color: #fff;
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.5;
+  background-color: #070707ec;
 }
 
 
@@ -21,7 +25,6 @@ body {
 header {
     text-align: center;
     margin: 10px;
-    color: black;
     font-size: 1.8rem;
     font-weight: thin;
 }
@@ -37,9 +40,9 @@ header {
 }
 
 section article {
-    color: #4d4e53;
     margin: 18px;
     font-size: 1em;
+    color: rgba(230, 217, 217, 0.925);
 }
 
 section ul li {
@@ -48,6 +51,19 @@ section ul li {
 
 section ul li span {
     font-weight: bold;
+}
+
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    background-color: #353434ec;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
 }
   
   
