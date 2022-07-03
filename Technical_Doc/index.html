@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,28 @@
     <link rel="stylesheet" href="./CSS/index.css">
     <title>Technical Documentation</title>
 </head>
+
 <body>
     <!-- navbar start -->
-    <nav id = "navbar">
+    <nav id="navbar">
         <header>C++ Documentation</header>
     </nav>
     <!-- navbar end -->
-    <!-- main section start -->
+
+    <!-- main-doc start -->
     <main id="main-doc">
-        <section class="main-section" id = "Introduction">
+        <!-- main-section introduction -->
+        <section class="main-section" id="Introduction">
             <header>Introduction</header>
             <article>
                 <p>
-                    C++ is a general-purpose programming language that was developed as an enhancement of the C language to include object-oriented paradigm. It is an imperative and a compiled language.
+                    C++ is a general-purpose programming language that was developed as an enhancement of the C language
+                    to include object-oriented paradigm. It is an imperative and a compiled language.
                 </p>
                 <p>
-                    C++ is a middle-level language rendering it the advantage of programming low-level (drivers, kernels) and even higher-level applications (games, GUI, desktop apps etc.). The basic syntax and code structure of both C and C++ are the same. 
+                    C++ is a middle-level language rendering it the advantage of programming low-level (drivers,
+                    kernels) and even higher-level applications (games, GUI, desktop apps etc.). The basic syntax and
+                    code structure of both C and C++ are the same.
                 </p>
                 <p>
                     Some of the features & key-points to note about the programming language are as follows:
@@ -30,22 +37,29 @@
 
                 <ul>
                     <li>
-                        <span>Simple:</span> It is a simple language in the sense that programs can be broken down into logical units and parts, has a rich library support and a variety of data-types.
+                        <span>Simple:</span> It is a simple language in the sense that programs can be broken down into
+                        logical units and parts, has a rich library support and a variety of data-types.
                     </li>
                     <li>
-                        <span>Machine Independent but Platform Dependent:</span>  A C++ executable is not platform-independent (compiled programs on Linux won’t run on Windows), however they are machine independent.
-                    </li>                   
+                        <span>Machine Independent but Platform Dependent:</span> A C++ executable is not
+                        platform-independent (compiled programs on Linux won’t run on Windows), however they are machine
+                        independent.
+                    </li>
                     <li>
-                        <span>Mid-level language: </span>It is a mid-level language as we can do both systems-programming (drivers, kernels, networking etc.) and build large-scale user applications (Media Players, Photoshop, Game Engines etc.)
+                        <span>Mid-level language: </span>It is a mid-level language as we can do both
+                        systems-programming (drivers, kernels, networking etc.) and build large-scale user applications
+                        (Media Players, Photoshop, Game Engines etc.)
                     </li>
                 </ul>
             </article>
         </section>
-        <section class="main-section" id = "Hello-World">
+
+        <!-- main-section hello-world -->
+        <section class="main-section" id="Hello-World">
             <article>
                 <header>Hello World</header>
                 <p>
-                    This is the first program in C++ which printing the "Hello world" on the terminal or console.
+                    This is the first program in C++ which prints the "Hello world" on the terminal or console.
                 </p>
                 <code>
                     #include <span><</span>iostream<span>></span><br>
@@ -58,10 +72,326 @@
                 </code>
             </article>
         </section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
+
+        <!-- C++ Data Types -->
+        <section class="main-section" id="Data-Types">
+            <header>
+                C++ Data Types
+            </header>
+
+            <article>
+                <p>
+                    In C++, data types are declarations for variables. This determines the type and size of data
+                    associated with variables. For example,
+                </p>
+
+                <code>
+                    int age = 10;
+                </code>
+                <p>
+                    Here "age" is a variable of type "int". Meaning the variable can only store the integer of 2 or 4
+                    bytes.
+                </p>
+                <hr>
+                <h2>C++ Fundamental Data Types</h2>
+                <table class="data-type-chart">
+                    <thead>
+                        <tr>
+                            <th>DataType</th>
+                            <th>Meaning</th>
+                            <th>Size (in Bytes)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="type">int</td>
+                            <td>Integer</td>
+                            <td>2 or 4</td>
+                        </tr>
+
+                        <tr>
+                            <td class="type">float</td>
+                            <td>Float-point</td>
+                            <td>4</td>
+                        </tr>
+
+                        <tr>
+                            <td class="type">double</td>
+                            <td>Double Floating-point</td>
+                            <td>8</td>
+                        </tr>
+
+                        <tr>
+                            <td class="type">char</td>
+                            <td>Character</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td class="type">wchar_t</td>
+                            <td>Wide Character</td>
+                            <td>2</td>
+                        </tr>
+
+                        <tr>
+                            <td class="type">bool</td>
+                            <td>Boolean</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td class="type">void</td>
+                            <td>Empty</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p style="margin-top: 20px;">Now, lets discuss the data types in more detail.</p>
+
+                <hr>
+
+                <!-- c++ int -->
+                <h2>1. C++ int</h2>
+                <ul>
+                    <li>
+                        The "int" keyword is used to indicate integers.
+                    </li>
+                    <li>
+                        Its size is usually 4 bytes. Meaning, it can store values from -2147483648 to 2147483647.
+                    </li>
+                    <li>
+                        For example,
+                        <code>
+                            int salary = 85000;
+                        </code>
+                    </li>
+                </ul>
+                <hr>
+
+                <!-- c++ "float" and "double" -->
+                <h2>2. C++ float and double</h2>
+                <ul>
+                    <li>
+                        "float" and "double" are used to store floating-point numbers (decimals and exponentials).
+                    </li>
+                    <li>
+                        The size of "float" is 4 bytes and the size of "double" is 8 bytes. Hence, "double" has two
+                        times the precision of "float".
+                    </li>
+                    <li>
+                        For example,
+                        <code>
+                            float area = 64.74;<br>
+                            double volume = 134.64534;
+                        </code>
+                        As mentioned above, these two data types are also used for exponentials. For example,
+                        <code>
+                            double distance = 45E12    // 45E12 is equal to 45*10^12
+                        </code>
+                    </li>
+                </ul>
+                <hr>
+                <!-- c++ char -->
+                <h2>3. C++ char</h2>
+                <ul>
+                    <li>
+                        Keyword "char" is used for characters.
+                    </li>
+                    <li>
+                        Its size is 1 byte.
+                    </li>
+                    <li>
+                        Characters in C++ are enclosed inside single quotes ' '.
+                    </li>
+                    <li>
+                        For example,
+                        <code>
+                            char test = 's';
+                        </code>
+                    </li>
+                </ul>
+                <hr>
+
+                <!-- c++ wchar_t -->
+                <h2>4. C++ wchar_t</h2>
+                <ul>
+                    <li>
+                        Wide character "wchar_t" is similar to the "char" data type, except its size is 2 bytes instead of 1.
+                    </li>
+                    <li>
+                        It is used to represent characters that require more memory to represent them than a single "char".
+                    </li>
+                    <li>
+                        Characters in C++ are enclosed inside single quotes ' '.
+                    </li>
+                    <li>
+                        For example,
+                        <code>
+                            wchar_t test = L'ם'  // storing Hebrew character;
+                        </code>
+                        Notice the letter L before the quotation marks.
+                    </li>
+                </ul>
+                <hr>
+
+                 <!-- c++ boolean -->
+                 <h2>5. C++ bool</h2>
+                 <ul>
+                     <li>
+                        The "bool" data type has one of two possible values: true or false.
+                     </li>
+                     <li>
+                        Booleans are used in conditional statements and loops (which we will learn in later chapters).
+                     </li>
+                     <li>
+                         For example,
+                         <code>
+                            bool cond = false;
+                         </code>
+                     </li>
+                 </ul>
+                 <hr>
+
+                  <!-- c++ void -->
+                  <h2>6. C++ void</h2>
+                  <ul>
+                      <li>
+                        The void keyword indicates an absence of data. It means "nothing" or "no value".
+                      </li>
+                      <li>
+                        We will use void when we learn about functions and pointers.
+                      </li>
+                      <li>
+                        We cannot declare variables of the void type.
+                      </li>
+                  </ul>   
+            </article>
+        </section>
+
+        <!-- c++ comments -->
+        <section class="main-section">
+            <header>C++ Comments</header>
+            <article>
+                <p>
+                    C++ comments are hints that a programmer can add to make their code easier to read and understand. They are completely ignored by C++ compilers.
+                </p>
+                <p>
+                    There are two ways to add comments to code: <br>
+                        <span class="m-l">
+                            // - Single Line Comments
+                        </span> <br>
+                        <span class = "m-l">
+                            /* */ - Multi Line Comments
+                        </span>                
+                </p>
+                <hr>
+
+                <h2>Single Line Comments</h2>
+                    <p>In C++, any line that starts with // is a comment. For example,</p>
+                    <code>
+                        // declaring a variable <br>
+                        int a; <br>
+
+                        // initializing the variable 'a' with the value 2 <br>
+                        a = 2;
+                    </code>
+                    <p>Here we have used two single line comments:</p>
+                    <ul>
+                        <li>// declaring a variable</li>
+                        <li>// initializing the variable 'a' with the value 2</li>
+                    </ul>
+                    <p>We can also use single line comment like this:</p>
+                    <code>
+                        int a;    // declaring a variable
+                    </code>
+                    <hr>
+
+                    <!-- multiline comments -->
+                    <h2>Multi Line Comments</h2>
+                    <p>In C++, any line between /* and */ is also a comment. For example,</p>
+                    <code>
+                        /* declaring a variable <br>
+                        to store salary to employees <br>
+                        */ <br>
+                        int salary = 2000;
+                    </code>
+                    <p>This syntax can be used to write both single-line and multi-line comments.</p>
+            </article>
+        </section>
+
+        <!-- c++ if-else, nested if-else -->
+        <section class="main-section">
+            <header>C++ if, if...else</header>
+            <article>
+                <p>
+                    In computer programming, we use the <span class="bolder-text">if...else</span> statement to run one block of code under certain conditions and another block of code under different conditions.
+                </p>
+                <p>
+                    For example, assigning grades (A, B, C) based on marks obtained by a student.
+                </p>
+                <ul>
+                    <li>if the percentage is above 90, assign grade A</li>
+                    <li>if the percentage is above 75, assign grade B</li>
+                    <li>if the percentage is above 65, assign grade C</li>
+                </ul>
+                <hr>
+
+                <p>There are three forms of if...else statements in C++.</p>
+                <ol>
+                    <li><span class="bolder-text">if</span> statement</li>
+                    <li><span class="bolder-text">if...else</span> statement</li>
+                    <li><span class="bolder-text">if...else if...else</span> statement</li>
+                </ol>
+                <hr>
+
+                <!-- c++ if statement -->
+                <h2>C++ if statement</h2>
+                <p>The syntax of <span class="bolder-text">if</span> statement:</p>
+                <code>
+                    if ( condition ) { <br>
+                        // body of if statement <br>
+                    }
+                </code>
+                <p>The <span class="bolder-text">if</span> statement evaluates the condition inside the parentheses ( ).</p>
+                <ul>
+                    <li>
+                        If the condition evaluates to true, the code inside the body of <span class="bolder-text">if</span> is executed.
+                    </li>
+                    <li>
+                        If the condition evaluates to false, the code inside the body of <span class="bolder-text">if</span> is skipped.
+                    </li>
+                </ul>
+                <hr>
+                <!-- c++ if...else -->
+                <h2>C++ if...else</h2>
+                <p>The <span class="bolder-text">if</span> statement can have an optional else clause. Its syntax is:</p>
+                <code>
+                    if (condition) { <br>
+                        // block of code if condition is true <br>
+                      } <br>
+                      else { <br> 
+                        // block of code if condition is false <br>
+                      }
+                </code>
+                <p>The <span class="bolder-text">if..else</span> statement evaluates the <span class="bolder-text">condition</span> inside the parenthesis.</p>
+
+                <p>If the <span class="bolder-text">condition</span> evaluates <span class="bolder-text">true,</span></p>
+                <ul>
+                    <li>the code inside the body of <span class="bolder-text">if</span> is executed</li>
+                    <li>the code inside the body of <span class="bolder-text">else</span> is skipped from execution</li>
+                </ul>
+
+                <p>If the <span class="bolder-text">condition</span> evaluates <span class="bolder-text">false,</span></p>
+                <ul>
+                    <li>the code inside the body of <span class="bolder-text">else</span> is executed</li>
+                    <li>the code inside the body of <span class="bolder-text">if</span> is skipped from execution</li>
+                </ul>
+            </article>
+        </section>
     </main>
-    <!-- main section end -->
+    <!-- main-doc end -->
+
 </body>
+
 </html>
