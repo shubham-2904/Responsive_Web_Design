@@ -13,6 +13,18 @@
     <!-- navbar start -->
     <nav id="navbar">
         <header>C++ Documentation</header>
+
+        <!-- navition list topic -->
+        <ul id = "navigationList">
+            <li><a href="#Introduction" class="nav-link active">Introduction</a></li>
+            <li><a href="#Hello_World" class="nav-link">Hello World</a></li>
+            <li><a href="#C++_Data_Types" class="nav-link">C++ Data Types</a></li>
+            <li><a href="#C++_Comments" class="nav-link">C++ Comments</a></li>
+            <li><a href="#C++_if,_if...else" class="nav-link">C++ if, if...else</a></li>
+            <li><a href="#C++_Loops" class="nav-link">C++ Loops</a></li>
+            <li><a href="#C++_Functions" class="nav-link">C++ Functions</a></li>
+            <li><a href="#Reference" class="nav-link">Reference</a></li>
+        </ul>
     </nav>
     <!-- navbar end -->
 
@@ -55,9 +67,9 @@
         </section>
 
         <!-- main-section hello-world -->
-        <section class="main-section" id="Hello-World">
+        <section class="main-section" id="Hello_World">
+            <header>Hello World</header>
             <article>
-                <header>Hello World</header>
                 <p>
                     This is the first program in C++ which prints the "Hello world" on the terminal or console.
                 </p>
@@ -74,10 +86,8 @@
         </section>
 
         <!-- C++ Data Types -->
-        <section class="main-section" id="Data-Types">
-            <header>
-                C++ Data Types
-            </header>
+        <section class="main-section" id="C++_Data_Types">
+            <header>C++ Data Types</header>
 
             <article>
                 <p>
@@ -272,7 +282,7 @@
         </section>
 
         <!-- c++ comments -->
-        <section class="main-section" id = "Comments">
+        <section class="main-section" id = "C++_Comments">
             <header>C++ Comments</header>
             <article>
                 <p>
@@ -324,7 +334,7 @@
         </section>
 
         <!-- c++ if-else, nested if-else -->
-        <section class="main-section" id = "if-else">
+        <section class="main-section" id = "C++_if,_if...else">
             <header>C++ if, if...else</header>
             <article>
                 <p>
@@ -402,10 +412,8 @@
         </section>
 
         <!-- c++ for loop -->
-        <section class="main-section" id = "loops">
-           <header>
-            C++ for Loop
-           </header>
+        <section class="main-section" id = "C++_Loops">
+           <header>C++ Loops</header>
            <p>
             In computer programming, loops are used to repeat a block of code.
            </p>
@@ -486,10 +494,8 @@
         </section>
 
         <!-- function section -->
-        <section class="main-section" id = "loops">
-           <header>
-            C++ Functions
-           </header>
+        <section class="main-section" id = "C++_Functions">
+           <header>C++ Functions</header>
            <article>
             <p>
                 A function is a block of code that performs a specific task.
@@ -497,11 +503,102 @@
             <p>
                 Suppose we need to create a program to create a circle and color it. We can create two functions to solve this problem:
             </p>
+            <ul>
+                <li>a function to draw the circle</li>
+                <li>a function to color the circle</li>
+            </ul>
+            <p>
+                Dividing a complex problem into smaller chunks makes our program easy to understand and reusable.
+            </p>
+            <p>
+                There are two types of function:
+            </p>
+            <ol>
+                <li><strong>Standard Library Functions:</strong> Predefined in C++</li>
+                <li>
+                    <strong>User-defined Function:</strong> Created by users
+                </li>
+            </ol>
+            <p>
+                In this we will focus mostly on user-defined functions,
+            </p>
+            <hr>
+            <!-- c++ user-defined function -->
+            <h2>C++ User-defined Function</h2>
+            <p>
+                C++ allows the programmer to define their own function.
+            </p>
+            <p>
+                A user-defined function groups code to perform a specific task and that group of code is given a name (identifier).
+            </p>
+            <p>
+                When the function is invoked from any part of the program, it all executes the codes defined in the body of the function.
+            </p>
+            <h3>
+                C++ Function Declaration
+            </h3>
+            <p>
+                The syntax to declare a function is:
+            </p>
+            <code>
+                returnType functionName (parameter1, parameter2,...) { <br>
+                    // function body   <br>
+                }
+            </code>
+            <p>
+                Here's an example of a function declaration.
+            </p>
+
+            <code>
+                // function declaration <br>
+                void greet() { <br>
+                    cout << "Hello World"; <br>
+                }
+            </code>
+
+            <p>Here,</p>
+            <ul>
+                <li>the name of the function is <span class="bolder-text">greet()</span></li>
+                <li>the return type of the function is <span class="bolder-text">void</span></li>
+                <li>the empty parentheses mean it doesn't have any paremeters</li>
+                <li>the function body is written inside <span class="bolder-text">{}</span></li>
+            </ul>
            </article>
         </section>
 
+        <!-- Reference section -->
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+
+            <article>
+                <p>
+                    This article is taken form 
+                </p>
+                <ul>
+                    <li>Programiz.com</li>
+                    <li>geeksforgeeks.org</li>
+                </ul>
+
+            </article>
+        </section>
     </main>
     <!-- main-doc end -->
 </body>
+
+<!-- script -->
+<script>
+    var navList = document.getElementById( "navigationList" );
+    var list = navList.getElementsByClassName('nav-link');
+
+    for (var i = 0 ; i < list.length; i++) {
+        list[i].addEventListener('click', function() {
+            var current = document.getElementsByClassName(' active');
+            current[0].className = current[0].className.replace( " active", "" );
+
+            this.className += " active";
+        })
+    }
+
+</script>
 
 </html>

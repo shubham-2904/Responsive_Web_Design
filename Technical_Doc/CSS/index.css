@@ -19,7 +19,42 @@ body {
     min-width: 290px;
     width: 300px;
     height: 100%;
-    background-color: red;
+    background-color: #070707ec;
+}
+
+#navbar ul {
+    height: 88%;
+    width: 300px;
+    padding: 0;
+    overflow-y: auto; 
+    overflow-x: hidden;
+
+}
+
+#navbar li {
+    color: #4d4e53;
+    border-top: 1px solid;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    transition: all ease;
+    scroll-behavior: smooth;
+}
+
+#navbar a {
+    display: block;
+    padding: 10px 30px;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.active, #navbar li:hover {
+    background-color: #353434ec;
+}
+
+#navbar li:hover a {
+    margin-left: 10px;
 }
 
 header {
@@ -32,6 +67,8 @@ header {
 #main-doc {
     position: absolute;
     margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
 }
 
 #main-doc header {
@@ -106,4 +143,20 @@ table tr:hover th,  table tr:hover td {
     font-weight: bold;
     color: white;
     font-size: 1.2em;
+}
+
+/* media query */
+@media only screen and (max-width: 400px) {
+    #main-doc {
+        margin-left: -10px;
+    }
+
+    code {
+        margin-left: -20px;
+        width: 100%;
+        padding: 15px;
+        padding-left: 10px;
+        padding-right: 45px;
+        min-width: 233px;
+    }
 }
